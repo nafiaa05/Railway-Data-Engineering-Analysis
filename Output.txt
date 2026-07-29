@@ -1,0 +1,177 @@
+First 10 Rows:
+   Train_No    Train_Name           Source_Station_Name            Destination_Station_Name       days
+0       107  SWV-MAO-VLNK               SAWANTWADI ROAD                         MADGOAN JN.   Saturday
+1       108  VLNK-MAO-SWV                   MADGOAN JN.                     SAWANTWADI ROAD     Friday
+2       128  MAO-KOP SPEC                   MADGOAN JN.  CHHATRAPATI SHAHU MAHARAJ TERMINUS     Friday
+3       290  PALACE ON WH             DELHI-SAFDAR JANG                   DELHI-SAFDAR JANG  Wednesday
+4       401  BSB BHARATDA                    AURANGABAD                        VARANASI JN.   Saturday
+5       421  LKO-SVDK FTR                   LUCKNOW JN.        SHRI MATA VAISHNO DEVI KATRA    Tuesday
+6       422  SVDK-LKO FTR  SHRI MATA VAISHNO DEVI KATRA                         LUCKNOW JN.     Monday
+7       477  FTR TRAIN NO                         SIRSA                               SIRSA     Sunday
+8       502  RJPB-UMB FTR        RAJENDRANAGAR TERMINAL                     AMBALA CANTT JN     Monday
+9       504  PNBE-BTI FTR                     PATNA JN.                         BATHINDA JN  Wednesday
+
+Dataset Information:
+<class 'pandas.DataFrame'>
+RangeIndex: 11113 entries, 0 to 11112
+Data columns (total 5 columns):
+ #   Column                    Non-Null Count  Dtype
+---  ------                    --------------  -----
+ 0   Train_No                  11113 non-null  int64
+ 1   Train_Name                11113 non-null  str  
+ 2   Source_Station_Name       11113 non-null  str  
+ 3   Destination_Station_Name  11113 non-null  str  
+ 4   days                      11113 non-null  str  
+dtypes: int64(1), str(4)
+memory usage: 434.2 KB
+
+Missing Values:
+Train_No                    0
+Train_Name                  0
+Source_Station_Name         0
+Destination_Station_Name    0
+days                        0
+dtype: int64
+
+Total Number of Trains: 11113
+Unique Source Stations: 921
+Unique Destination Stations: 924
+
+Most Common Source Station:
+Source_Station_Name
+CST-MUMBAI    513
+Name: count, dtype: int64
+
+Most Common Destination Station:
+Destination_Station_Name
+CST-MUMBAI    514
+Name: count, dtype: int64
+
+Missing values handled successfully.
+Station names converted to uppercase successfully.
+
+Cleaned Dataset:
+   Train_No    Train_Name           Source_Station_Name            Destination_Station_Name       days
+0       107  SWV-MAO-VLNK               SAWANTWADI ROAD                         MADGOAN JN.   Saturday
+1       108  VLNK-MAO-SWV                   MADGOAN JN.                     SAWANTWADI ROAD     Friday
+2       128  MAO-KOP SPEC                   MADGOAN JN.  CHHATRAPATI SHAHU MAHARAJ TERMINUS     Friday
+3       290  PALACE ON WH             DELHI-SAFDAR JANG                   DELHI-SAFDAR JANG  Wednesday
+4       401  BSB BHARATDA                    AURANGABAD                        VARANASI JN.   Saturday
+5       421  LKO-SVDK FTR                   LUCKNOW JN.        SHRI MATA VAISHNO DEVI KATRA    Tuesday
+6       422  SVDK-LKO FTR  SHRI MATA VAISHNO DEVI KATRA                         LUCKNOW JN.     Monday
+7       477  FTR TRAIN NO                         SIRSA                               SIRSA     Sunday
+8       502  RJPB-UMB FTR        RAJENDRANAGAR TERMINAL                     AMBALA CANTT JN     Monday
+9       504  PNBE-BTI FTR                     PATNA JN.                         BATHINDA JN  Wednesday
+
+Number of Saturday Trains: 1441
+    Train_No    Train_Name   Source_Station_Name Destination_Station_Name      days
+0        107  SWV-MAO-VLNK       SAWANTWADI ROAD              MADGOAN JN.  Saturday
+4        401  BSB BHARATDA            AURANGABAD             VARANASI JN.  Saturday
+21      1196  NGP-KRMI SPL        NAGPUR JN.(CR)                  KARMALI  Saturday
+28      1706   JBP-BDTS SF              JABALPUR          BANDRA TERMINUS  Saturday
+45      2834  SRC-RJT SF A       SANTRAGACHI JN.                   RAJKOT  Saturday
+54      3305   DHN-KUSUNDA           DHANBAD JN.                  KUSUNDA  Saturday
+59      3502  ANVT-JSME BI  ANAND VIHAR TERMINAL              JASIDIH JN.  Saturday
+77      4802  MKN PBC PASS           MAKRANA JN.           PARVATSAR CITY  Saturday
+91      5066   LJN-CPR-EXP           LUCKNOW JN.              CHHAPRA JN.  Saturday
+95      5306  FBD- CPA EXP        FARRUKHABAD JN         KANPUR ANWARGANJ  Saturday
+
+Number of trains starting from CST-MUMBAI: 513
+     Train_No    Train_Name Source_Station_Name            Destination_Station_Name       days
+14       1011   CSMT-NGP SF          CST-MUMBAI                      NAGPUR JN.(CR)   Thursday
+31       2025  CSMT-KRMI SF          CST-MUMBAI                             KARMALI    Tuesday
+273     10103  MANDOVI EXPR          CST-MUMBAI                         MADGOAN JN.   Thursday
+275     10111  KONKAN KANYA          CST-MUMBAI                         MADGOAN JN.     Friday
+285     11007  DECCAN EXPRE          CST-MUMBAI                            PUNE JN.  Wednesday
+287     11009  SINHAGAD EXP          CST-MUMBAI                            PUNE JN.   Thursday
+297     11019  KONARK EXPRE          CST-MUMBAI                         BHUBANESWAR     Friday
+301     11023  SAHYADRI EXP          CST-MUMBAI  CHHATRAPATI SHAHU MAHARAJ TERMINUS  Wednesday
+305     11027  CSMT-MAS MAI          CST-MUMBAI                     CHENNAI CENTRAL     Sunday
+307     11029  KOYNA EXPRES          CST-MUMBAI  CHHATRAPATI SHAHU MAHARAJ TERMINUS    Tuesday
+
+Number of Trains from Each Source Station:
+  Source_Station_Name  Number_of_Trains
+0        ABHANPUR JN.                 2
+1              ABOHAR                 1
+2            ABU ROAD                 1
+3        ACHHNERA JN.                 1
+4            ADILABAD                 5
+5                ADRA                16
+6          ADRAJ MOTI                 2
+7            AGARTALA                 8
+8          AGRA  FORT                 6
+9          AGRA CANTT                16
+
+Average Trains Per Day:
+  Source_Station_Name  Average_Trains_Per_Day
+0        ABHANPUR JN.                1.000000
+1              ABOHAR                1.000000
+2            ABU ROAD                1.000000
+3        ACHHNERA JN.                1.000000
+4            ADILABAD                1.250000
+5                ADRA                2.285714
+6          ADRAJ MOTI                2.000000
+7            AGARTALA                2.000000
+8          AGRA  FORT                1.200000
+9          AGRA CANTT                1.777778
+
+Day Category Count:
+Day_Category
+Weekday    8240
+Weekend    2873
+Name: count, dtype: int64
+
+Distribution of Train Journeys:
+days
+Monday       1342
+Tuesday      1454
+Wednesday    1448
+Thursday     1372
+Friday       1471
+Saturday     1441
+Sunday       1432
+Name: count, dtype: int64
+
+Top 10 Source Stations:
+Source_Station_Name
+CST-MUMBAI       513
+SEALDAH          372
+CHENNAI BEACH    339
+HOWRAH JN.       338
+KALYAN JN        285
+THANE            186
+PANVEL           141
+TAMBARAM         140
+MOOR MARKET      135
+VELACHEERY       115
+Name: count, dtype: int64
+
+Top 10 Destination Stations:
+Destination_Station_Name
+CST-MUMBAI       514
+SEALDAH          373
+CHENNAI BEACH    342
+HOWRAH JN.       337
+KALYAN JN        284
+THANE            194
+PANVEL           144
+TAMBARAM         140
+MOOR MARKET      132
+VELACHEERY       118
+Name: count, dtype: int64
+
+Number of Trains by Operating Day:
+days
+Monday       1342
+Tuesday      1454
+Wednesday    1448
+Thursday     1372
+Friday       1471
+Saturday     1441
+Sunday       1432
+Name: count, dtype: int64
+
+======================================
+ Railway Data Engineering Project
+ Successfully Completed
+======================================
