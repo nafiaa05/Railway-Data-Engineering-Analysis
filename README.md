@@ -47,12 +47,13 @@ This project was completed as part of the Data Engineering Internship at Cognify
 2. Open the Jupyter Notebook.
 3. Run all notebook cells.
 
+
 ## 📊 Sample Visualizations
+
 - Top Source Stations
 - Top Destination Stations
 - Train Distribution by Day
 - Train Count Per Day
-
 
 ## 👨‍💻 Author
 **Arif Nafiaa S**
